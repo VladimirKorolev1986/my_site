@@ -21,4 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views_blog.main_page),
     path('posts/', views_blog.posts),
+    path('movie/<actor>', views_blog.movie),
 ]
