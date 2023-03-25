@@ -22,4 +22,6 @@ urlpatterns = [
     path('', views_blog.main_page),
     path('posts/', views_blog.posts),
     path('movie/<actor>', views_blog.movie),
+    path('get_guinness_world_records/', views_blog.get_guinness_world_records),
+
 ]
