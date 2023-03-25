@@ -30,3 +30,15 @@ def get_guinness_world_records(request):
         'count_needle': 1790,
     }
     return render(request, 'blog/guinnessworldrecords.html', context=context)
+
+
+def go_by_number(request, number_posts):
+    context = {'number': number_posts}
+    return render(request, 'blog/detail_by_number.html', context=context)
+
+
+
+def go_by_string(request, string_posts):
+    context = {'text': string_posts}
+    return render(request, 'blog/detail_by_name.html', context=context)
+
