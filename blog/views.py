@@ -56,7 +56,9 @@ posts = [
 
 
 def main_page(request):
-    context = posts
+    context = {
+        'posts': posts
+    }
     return render(request, 'blog/index.html', context=context)
 
 
