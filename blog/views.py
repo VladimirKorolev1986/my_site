@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.template.loader import render_to_string
+import random
 
 actor_movie = {'kianu_rivze': {'year_born': 1964,
                                'city_born': 'beirut',
@@ -56,14 +57,14 @@ posts = [
 
 
 def main_page(request):
+    random.shuffle(posts)
     context = {
-        'posts': posts
+        'posts': posts[:3]
     }
     return render(request, 'blog/index.html', context=context)
 
 
-# def posts(request):
-#     return HttpResponse('Все посты блога')
+
 
 
 def movie(request, actor: str):
